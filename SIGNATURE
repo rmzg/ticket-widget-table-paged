@@ -1,0 +1,53 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.73.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 6a4c6b38c1cd54f9121595cf8bd231c756cb3f17 Changes
+SHA1 3b11342194b3f1e22362bd1a3af9a03c69402baf INSTALL
+SHA1 aeb48d9f22d31def6e02d02d35dd602604e84a36 LICENSE
+SHA1 e60bf98781de5670ed4cf1094977ed42639ef1fb MANIFEST
+SHA1 78b00c8eded211f23369563f84bb25ad722b395a META.json
+SHA1 23257c3a808b33a1b39bff2916a6a04af59978ba META.yml
+SHA1 991839326230bd414e82735a96ba4d30de8fa914 Makefile.PL
+SHA1 e38dfb00290fe00d767f13596cb3661febabbd64 README
+SHA1 ddba994baaf8e72c290373404fa85d35847ea007 cpanfile
+SHA1 b4e782b9beb8f68ca3bc459e21f04a79b838d034 dist.ini
+SHA1 79f68eab45ff8b14d99d076e0f0f98a9be9872de examples/multi.pl
+SHA1 587bf79ba4a248d41e2949b87f7ba17b9389cda3 examples/multiselect.pl
+SHA1 8544a742a85140851a10068c173835ed283b0609 examples/style.pl
+SHA1 32ab7770fa42e98b784be6793ab6731e9b774216 lib/Tickit/Widget/Table/Paged.pm
+SHA1 67a4aa6f1311b33c362e27a0b927be83cad5a0f9 lib/Tickit/Widget/Table/Paged.pod
+SHA1 7c70c5d0eb92848ee827c54bf3f279594cef8c3e screenshots/tickit-widget-table-paged1.gif
+SHA1 84cd2ca0ecdff82464bf61c9d18eef77c3ab3649 t/00-check-deps.t
+SHA1 d5614d096aad168810bc08118d7c48203b8360f1 t/00-compile.t
+SHA1 8a649950be26c5ee378eec15b7347387b9586aef xt/author/test-eol.t
+SHA1 198d1665317c3d91e3bb81f0a3b8dad8d4d66f20 xt/release/common_spelling.t
+SHA1 c6c3c9f7fe12058b4771449dff874b1c450c982c xt/release/mojibake.t
+SHA1 4c599e8a4ebb7a899f90ee3c235a64fdbc7e2c06 xt/release/pod-coverage.t
+SHA1 9934d36e45e1143c1a54658bc48872e0591af41b xt/release/pod-syntax.t
+SHA1 fd1fa776fca35fc8f1bdd24ee3fbaa1eca755a44 xt/release/synopsis.t
+SHA1 bbcd59d081d9940af5d43337ae85458075933829 xt/release/test-version.t
+SHA1 ec3f84bfd7a9ce3246e7592f4134100c6b5ce02b xt/release/unused-vars.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSfuDgAAoJEFKElMNpjtyD0kkH/j7NDiqbuMvIMWoFt/haqB/T
+5B7sgkQ6HG5AUfzcDVHdMa/zg26h+N3BoJ7dA7x8rmgkQ57YCFBe3A03+dFDib2Y
+Rn0H4Q9Cw5HffrBpjFeWjs2YGnieKB8YygEPW79cSj7AyHyNfGDKl0uQ7iD+/cCG
+iOspkrQyXpePh6kG/cMStjPkciRcj3AfX5Tz7A1C7s3j1FIQAv9zX9U5OtpUxu7X
+8Mjyihv2HSU1q8210PJ7pnw4Yuz6gWcZM3tm+mlSH2FC0UmnDfyVBXzVA1LwRtxy
+ppuhZIO/IkleI8OCgaYYPUU8e7LtsffgA0ChSMx7WY/UxV0tB+60zQmAQPIB9CI=
+=g4/a
+-----END PGP SIGNATURE-----
