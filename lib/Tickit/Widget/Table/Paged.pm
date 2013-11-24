@@ -107,6 +107,18 @@ my %ALIGNMENT_TYPE = (
 
 Instantiate. Will attempt to take focus.
 
+Takes the following optional arguments:
+
+=over
+
+=item B<on_activate>: a coderef to execute when the 'activate' action is triggered.
+
+=item B<multi_select>: Allows users to select (and higlight) multiple rows at a time.
+
+=item B<cursor_hidden>: Pass a true value to turn off the visibility of the cursor which is visible by default.
+
+=back
+
 =cut
 
 sub new {
@@ -114,9 +126,13 @@ sub new {
 	my %args = @_;
 	my $on_activate = delete $args{on_activate};
 	my $multi_select = delete $args{multi_select};
+	my $cursor_hidden = delete $args{cursor_hidden};
+
 	my $self = $class->SUPER::new(@_);
+
 	$self->on_activate($on_activate) if $on_activate;
 	$self->multi_select($multi_select);
+	$self->cursor_hidden($cursor_hidden);
 	$self->take_focus;
 	$self
 }
@@ -229,6 +245,29 @@ sub multi_select {
 		return $self;
 	}
 	return $self->{multi_select} ? 1 : 0
+}
+
+=head2 cursor_hidden
+
+Accessor to control the cursor visibility.
+
+=cut
+
+sub cursor_hidden {
+	my $self = shift;
+
+	if( @_ ) { 
+		my $value = shift;
+		$self->{cursor_hidden} = $value;
+
+		if( my $win = $self->window ) { 
+			if( $value ) { $win->cursor_shape( 0 ); }
+			else { $win->cursor_shape( Tickit::Term::TERM_CURSORSHAPE_BLOCK ) }
+		}
+		return $self;
+	}
+
+	return $self->{cursor_hidden} ? 1 : 0;
 }
 
 =head1 METHODS - Other
@@ -535,6 +574,7 @@ sub window_gained {
 	my $self = shift;
 	$self->SUPER::window_gained(@_);
 	my $win = $self->window;
+	$win->cursor_shape(0) if $self->cursor_hidden;
 	$win->set_expose_after_scroll(1) if $win->can('set_expose_after_scroll');
 # reshape will do this already
 #	$self->distribute_columns;
